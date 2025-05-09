@@ -19,10 +19,9 @@ if not st.session_state.authenticated:
     password = st.text_input("Senha", type="password")
     if st.button("Entrar"):
         if username == "spesia123" and password == "spesia123":
-            st.success("Login bem-sucedido!")
             st.session_state.authenticated = True
             st.rerun()
         else:
             st.error("Usuário ou senha incorretos.")
 else:
-    st.markdown("✅ Use o menu lateral para acessar as funcionalidades.")
+    st.success("✅ Use o menu lateral para acessar as funcionalidades.")
